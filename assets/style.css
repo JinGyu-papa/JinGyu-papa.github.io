@@ -1,33 +1,147 @@
-body {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 0 20px;
-  font-family: Georgia, "Times New Roman", serif;
-  line-height: 1.7;
-  color: #111;
-  background: #ffffff;
+/* =========================
+   Base
+   ========================= */
+:root{
+  --text: #111;
+  --muted: #555;
+  --link: #1a73e8;      /* Google-ish blue */
+  --border: #e6e6e6;    /* soft divider */
+  --bg: #ffffff;
 }
 
-nav {
-  margin-bottom: 40px;
-  font-size: 0.95em;
+*{ box-sizing: border-box; }
+
+body{
+  max-width: 860px;
+  margin: 56px auto;
+  padding: 0 22px;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--bg);
+  text-rendering: optimizeLegibility;
 }
 
-nav a {
+/* =========================
+   Navigation
+   ========================= */
+nav{
+  margin: 0 0 44px 0;
+  padding: 10px 0 14px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.95rem;
+}
+
+nav a{
   text-decoration: none;
-  color: #1a0dab;
-  margin-right: 8px;
+  color: var(--link);
+  margin-right: 10px;
 }
 
-nav a:hover {
+nav a:hover{
   text-decoration: underline;
 }
 
-h1 {
-  font-size: 1.9em;
-  margin-bottom: 0.6em;
+/* =========================
+   Typography
+   ========================= */
+h1{
+  font-size: 2.05rem;
+  font-weight: 650;
+  margin: 0 0 14px 0;
+  letter-spacing: -0.2px;
 }
 
-p {
-  margin-bottom: 1.2em;
+h2{
+  font-size: 1.35rem;
+  font-weight: 650;
+  margin: 46px 0 12px 0;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
+
+h3{
+  font-size: 1.12rem;
+  font-weight: 650;
+  margin: 28px 0 10px 0;
+}
+
+p{
+  margin: 14px 0;
+  color: var(--text);
+}
+
+p strong{
+  font-weight: 650;
+}
+
+/* =========================
+   Links & inline elements
+   ========================= */
+a{
+  color: var(--link);
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+small, .muted{
+  color: var(--muted);
+}
+
+/* =========================
+   Lists (Publications/Notes에 중요)
+   ========================= */
+ul{
+  margin: 10px 0 16px 20px;
+}
+
+li{
+  margin: 10px 0;
+}
+
+li strong{
+  color: var(--text);
+}
+
+/* =========================
+   Blockquotes (노트에 한 줄 요약 박스용)
+   ========================= */
+blockquote{
+  margin: 18px 0;
+  padding: 12px 14px;
+  border-left: 4px solid var(--border);
+  background: #fafafa;
+  color: var(--muted);
+}
+
+/* =========================
+   Code (필요 시)
+   ========================= */
+code{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 0.95em;
+  background: #f6f6f6;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+pre{
+  background: #f6f6f6;
+  padding: 12px 14px;
+  border-radius: 10px;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+}
+
+/* =========================
+   Footer helper (나중에 쓸 수 있음)
+   ========================= */
+.footer{
+  margin-top: 64px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.95rem;
 }
