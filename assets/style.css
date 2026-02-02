@@ -1,73 +1,80 @@
-/* =========================
-   Base
-   ========================= */
+/* ===== Google Sites-ish minimal ===== */
 :root{
-  --text: #111;
-  --muted: #555;
-  --link: #1a73e8;      /* Google-ish blue */
-  --border: #e6e6e6;    /* soft divider */
-  --bg: #ffffff;
+  --bg: #f1f3f4;        /* page background (light gray) */
+  --card: #ffffff;      /* content card */
+  --text: #202124;      /* Google-ish text */
+  --muted: #5f6368;     /* secondary */
+  --link: #1a73e8;      /* Google blue */
+  --border: #e0e0e0;    /* thin dividers */
 }
 
 *{ box-sizing: border-box; }
 
-body{
-  max-width: 860px;
-  margin: 56px auto;
-  padding: 0 22px;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-  line-height: 1.65;
-  color: var(--text);
+html{
   background: var(--bg);
-  text-rendering: optimizeLegibility;
 }
 
-/* =========================
-   Navigation
-   ========================= */
+body{
+  max-width: 980px;
+  margin: 36px auto;
+  padding: 42px 46px;
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.7;
+}
+
+/* Top nav = tab 느낌 */
 nav{
-  margin: 0 0 44px 0;
-  padding: 10px 0 14px 0;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 34px 0;
+  padding: 10px 0 12px 0;
   border-bottom: 1px solid var(--border);
-  font-size: 0.95rem;
+  font-size: 0.98rem;
 }
 
 nav a{
+  color: var(--muted);
   text-decoration: none;
-  color: var(--link);
-  margin-right: 10px;
+  padding: 8px 2px;
+  border-bottom: 2px solid transparent;
 }
 
 nav a:hover{
-  text-decoration: underline;
+  color: var(--text);
+  border-bottom-color: var(--border);
 }
 
-/* =========================
-   Typography
-   ========================= */
+/* 현재 페이지 표시 (아래 "옵션" 참고) */
+nav a[aria-current="page"]{
+  color: var(--text);
+  border-bottom-color: var(--link);
+}
+
+/* Typography */
 h1{
-  font-size: 2.05rem;
+  font-size: 2.2rem;
   font-weight: 650;
-  margin: 0 0 14px 0;
   letter-spacing: -0.2px;
+  margin: 0 0 12px 0;
 }
 
 h2{
   font-size: 1.35rem;
   font-weight: 650;
-  margin: 46px 0 12px 0;
-  padding-top: 10px;
+  margin: 34px 0 10px 0;
+  padding-top: 18px;
   border-top: 1px solid var(--border);
 }
 
-h3{
-  font-size: 1.12rem;
-  font-weight: 650;
-  margin: 28px 0 10px 0;
-}
-
 p{
-  margin: 14px 0;
+  margin: 12px 0;
   color: var(--text);
 }
 
@@ -75,9 +82,7 @@ p strong{
   font-weight: 650;
 }
 
-/* =========================
-   Links & inline elements
-   ========================= */
+/* Links in content */
 a{
   color: var(--link);
 }
@@ -86,62 +91,31 @@ a:hover{
   text-decoration: underline;
 }
 
-small, .muted{
-  color: var(--muted);
-}
-
-/* =========================
-   Lists (Publications/Notes에 중요)
-   ========================= */
+/* Lists */
 ul{
-  margin: 10px 0 16px 20px;
+  margin: 12px 0 18px 22px;
 }
-
 li{
   margin: 10px 0;
 }
 
-li strong{
-  color: var(--text);
-}
-
-/* =========================
-   Blockquotes (노트에 한 줄 요약 박스용)
-   ========================= */
+/* Optional: quote-like highlight for notes */
 blockquote{
-  margin: 18px 0;
+  margin: 16px 0;
   padding: 12px 14px;
   border-left: 4px solid var(--border);
   background: #fafafa;
   color: var(--muted);
 }
 
-/* =========================
-   Code (필요 시)
-   ========================= */
-code{
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
-  font-size: 0.95em;
-  background: #f6f6f6;
-  padding: 2px 6px;
-  border-radius: 6px;
-}
-
-pre{
-  background: #f6f6f6;
-  padding: 12px 14px;
-  border-radius: 10px;
-  overflow-x: auto;
-  border: 1px solid var(--border);
-}
-
-/* =========================
-   Footer helper (나중에 쓸 수 있음)
-   ========================= */
-.footer{
-  margin-top: 64px;
-  padding-top: 16px;
-  border-top: 1px solid var(--border);
-  color: var(--muted);
-  font-size: 0.95rem;
+/* Mobile */
+@media (max-width: 720px){
+  body{
+    margin: 18px 10px;
+    padding: 26px 18px;
+  }
+  nav{
+    gap: 12px;
+    flex-wrap: wrap;
+  }
 }
