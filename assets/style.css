@@ -28,41 +28,64 @@ body{
   scroll-padding-top: 72px;
 }
 
-/* ===== Top nav (tab 느낌 + sticky) ===== */
+/* ===== Top nav: Rounded Tabs (sticky, real tab UI) ===== */
 nav{
-  position: sticky;  /* 엑셀 틀고정 */
+  position: sticky;          /* 엑셀 틀고정 */
   top: 0;
   z-index: 1000;
 
   display: flex;
-  gap: 18px;
-  align-items: center;
   justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
 
   margin: 0 0 26px 0;
-  padding: 10px 0 12px 0;
+  padding: 10px 12px;
 
-  background: rgba(255,255,255,0.92); /* 스크롤 시 본문 비침 방지 */
-  backdrop-filter: blur(6px);         /* Google Sites-ish */
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(6px);
   border-bottom: 1px solid var(--border);
-  font-size: 0.98rem;
 }
 
+/* 각 탭 */
 nav a{
   color: var(--muted);
   text-decoration: none;
-  padding: 8px 2px;
-  border-bottom: 2px solid transparent;
+
+  padding: 8px 14px;
+  border-radius: 999px;          /* pill 형태 */
+  border: 1px solid transparent;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1;
+
+  transition:
+    background 140ms ease,
+    border-color 140ms ease,
+    color 140ms ease,
+    transform 140ms ease;
 }
 
+/* hover 효과 */
 nav a:hover{
+  background: #f8f9fa;
+  border-color: var(--border);
   color: var(--text);
-  border-bottom-color: var(--border);
+  transform: translateY(-1px);
 }
 
+/* 현재 페이지 탭 */
 nav a[aria-current="page"]{
+  background: rgba(26,115,232,0.12);
+  border-color: rgba(26,115,232,0.28);
   color: var(--text);
-  border-bottom-color: var(--link);
+}
+
+/* 현재 탭 hover */
+nav a[aria-current="page"]:hover{
+  background: rgba(26,115,232,0.16);
+  border-color: rgba(26,115,232,0.35);
 }
 
 /* ===== Typography ===== */
