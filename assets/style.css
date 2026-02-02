@@ -23,16 +23,27 @@ body{
   box-shadow: 0 1px 2px rgba(0,0,0,0.06);
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   line-height: 1.7;
+
+  /* anchor jump 시 sticky nav에 가리지 않게 */
+  scroll-padding-top: 72px;
 }
 
-/* ===== Top nav (tab 느낌) ===== */
+/* ===== Top nav (tab 느낌 + sticky) ===== */
 nav{
+  position: sticky;  /* 엑셀 틀고정 */
+  top: 0;
+  z-index: 1000;
+
   display: flex;
   gap: 18px;
   align-items: center;
   justify-content: center;
+
   margin: 0 0 26px 0;
   padding: 10px 0 12px 0;
+
+  background: rgba(255,255,255,0.92); /* 스크롤 시 본문 비침 방지 */
+  backdrop-filter: blur(6px);         /* Google Sites-ish */
   border-bottom: 1px solid var(--border);
   font-size: 0.98rem;
 }
@@ -56,7 +67,7 @@ nav a[aria-current="page"]{
 
 /* ===== Typography ===== */
 h1{
-  font-size: 2.0rem;
+  font-size: 2.15rem;
   font-weight: 700;
   letter-spacing: -0.2px;
   margin: 0 0 10px 0;
@@ -78,7 +89,7 @@ a:hover{ text-decoration: underline; }
 ul{ margin: 12px 0 18px 22px; }
 li{ margin: 10px 0; }
 
-/* ===== Blockquote (motto용으로 더 깔끔하게) ===== */
+/* ===== Blockquote (motto용) ===== */
 blockquote{
   margin: 14px 0 0 0;
   padding: 14px 16px;
@@ -89,10 +100,16 @@ blockquote{
 }
 
 /* -------------------------------------------------
-   HOME LANDING (for the "lab website" look)
-   Works with:
-   <section class="hero"><div class="hero-text">...</div></section>
-   and .section / .footnote
+   HOME LANDING (lab-style Home)
+   Recommended structure:
+
+   <section class="hero">
+     <div class="hero-text">
+       <p class="hero-brand">Independent Research</p>
+       <h1>JinGyu</h1>
+       <p class="subtitle">...</p>
+     </div>
+   </section>
 ------------------------------------------------- */
 
 /* Hero with background image */
@@ -102,13 +119,12 @@ blockquote{
   border: 1px solid var(--border);
   overflow: hidden;
 
-  /* Put your image at /assets/hero.jpg */
   background:
-    linear-gradient(0deg, rgba(255,255,255,0.82), rgba(255,255,255,0.82)),
+    linear-gradient(0deg, rgba(255,255,255,0.86), rgba(255,255,255,0.86)),
     url("/assets/hero.jpg");
-
   background-size: cover;
   background-position: center;
+
   min-height: 320px;
 
   display: flex;
@@ -123,6 +139,14 @@ blockquote{
   max-width: 820px;
 }
 
+/* Optional: 작은 라벨 */
+.hero-brand{
+  margin: 0 0 10px 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  letter-spacing: 0.2px;
+}
+
 /* Subtitle line under name/title */
 .subtitle{
   margin: 0;
@@ -135,11 +159,11 @@ blockquote{
   margin: 40px 0;
 }
 
-/* 작은 설명(방어 문구) */
 .section.small{
   margin-top: 24px;
 }
 
+/* 작은 설명(방어 문구) */
 .footnote{
   margin: 0;
   font-size: 0.9rem;
@@ -154,10 +178,12 @@ blockquote{
   body{
     margin: 18px 10px;
     padding: 26px 18px;
+    scroll-padding-top: 86px; /* 모바일에선 nav가 두 줄일 수 있음 */
   }
   nav{
     gap: 12px;
     flex-wrap: wrap;
+    padding: 12px 0 10px 0;
   }
   .hero{
     min-height: 240px;
@@ -166,6 +192,6 @@ blockquote{
     padding: 34px 18px;
   }
   h1{
-    font-size: 1.7rem;
+    font-size: 1.8rem;
   }
 }
