@@ -1,0 +1,33 @@
+body {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.7;
+  color: #111;
+  background: #ffffff;
+}
+
+nav {
+  margin-bottom: 40px;
+  font-size: 0.95em;
+}
+
+nav a {
+  text-decoration: none;
+  color: #1a0dab;
+  margin-right: 8px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  font-size: 1.9em;
+  margin-bottom: 0.6em;
+}
+
+p {
+  margin-bottom: 1.2em;
+}
