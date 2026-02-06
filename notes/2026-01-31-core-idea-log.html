@@ -36,114 +36,337 @@
   <!-- =====================
        A. 핵심 용어 (짧게)
        ===================== -->
-  <h2>A. Core Terms</h2>
+ <h2>A. Core Terms</h2>
 
-  <dl>
-    <dt><strong>[Term 1]</strong></dt>
-    <dd>[1–3 lines. What it is / why introduced / what it excludes.]</dd>
+<dl>
+  <dt><strong>Observable (fixed observable)</strong></dt>
+  <dd>
+    A single logarithmically localized exponential sum, fixed once and for all,
+    on which all upper and lower bounds are imposed.
+    No auxiliary or varying observables are introduced.
+  </dd>
+  <p class="source">
+    Source: extracted from <em>Layer 0 — Core Proof Engine</em>, Ch.1.
+  </p>
 
-    <dt><strong>[Term 2]</strong></dt>
-    <dd>[1–3 lines.]</dd>
+  <dt><strong>Same-object principle</strong></dt>
+  <dd>
+    All estimates—pointwise, mean-square, lower or upper—are applied to the same
+    fixed observable with the same normalization and intrinsic energy scale.
+    Bounds obtained for different objects are not compared.
+  </dd>
+  <p class="source">
+    Source: extracted from <em>Layer 0 — Core Proof Engine</em>, Ch.1–2.
+  </p>
 
-    <dt><strong>[Term 3]</strong></dt>
-    <dd>[1–3 lines.]</dd>
-  </dl>
+  <dt><strong>Mean–square incompatibility (collision)</strong></dt>
+  <dd>
+    The structural situation in which an exponential lower bound and a uniform
+    polynomial mean–square upper bound are forced to apply to the same observable,
+    leading to a contradiction as the window length grows.
+  </dd>
+  <p class="source">
+    Source: extracted from <em>Layer 0 — Core Proof Engine</em>, Ch.1 and Ch.5.
+  </p>
 
-  <hr />
+  <dt><strong>Filtered set</strong></dt>
+  <dd>
+    A subset of the logarithmic axis obtained by restricting the support of the
+    sum to remove rigid arithmetic resonances, while leaving the observable and
+    its normalization unchanged.
+  </dd>
+  <p class="source">
+    Source: extracted from <em>Layer 0 — Core Proof Engine</em>, Ch.2.
+  </p>
+
+  <dt><strong>Uniformity of constants</strong></dt>
+  <dd>
+    A bound is said to be uniform if its implicit constants do not depend on the
+    window length <em>L</em>, nor on the window location <em>U</em> or frequency
+    <em>β</em>, unless explicitly stated otherwise.
+  </dd>
+  <p class="source">
+    Source: extracted from <em>Layer 0 — Core Proof Engine</em>, Ch.2 and App.~A.3.
+  </p>
+</dl>
+
 
   <!-- =====================
        B. 기호/객체 정의
        ===================== -->
-  <h2>B. Symbols & Objects</h2>
+ <h2>B. Symbols & Objects</h2>
 
-  <dl>
-    <dt><strong>$u=\log n$</strong></dt>
-    <dd>[Meaning on log-axis; what “window” means in u-coordinates.]</dd>
+<dl>
+  <dt><strong>$u = \log n$</strong></dt>
+  <dd>
+    Logarithmic coordinate on the positive integers.
+    All arithmetic sums are interpreted as sums over subsets of the real line
+    indexed by the variable <em>u</em>.
+  </dd>
+  <p class="source">
+    Source: extracted from <em>Layer 0 — Core Proof Engine</em>, Ch.2.
+  </p>
 
-    <dt><strong>$\Lambda$</strong></dt>
-    <dd>[Filtered set on the log-axis (square-free / model set / incommensurate).]</dd>
+  <dt><strong>$\Lambda \subset \mathbb{R}$</strong></dt>
+  <dd>
+    A filtered point set on the logarithmic axis.
+    Typical examples include square-free filters, regular model sets, or
+    incommensurate samplings, chosen to suppress spurious arithmetic resonances.
+  </dd>
+  <p class="source">
+    Source: extracted from <em>Layer 0 — Core Proof Engine</em>, Ch.2.
+  </p>
 
-    <dt><strong>$L,\,U$</strong></dt>
-    <dd>[Window length and window location; how they are used.]</dd>
+  <dt><strong>$U$</strong></dt>
+  <dd>
+    The location parameter of a logarithmic window.
+    Translation in <em>U</em> corresponds to shifting the observation window
+    along the log-axis.
+  </dd>
+  <p class="source">
+    Source: extracted from <em>Layer 0 — Core Proof Engine</em>, Ch.2.
+  </p>
 
-    <dt><strong>$\beta$</strong></dt>
-    <dd>[Frequency / phase variable (dual to u).]</dd>
+  <dt><strong>$L$</strong></dt>
+  <dd>
+    The length of the logarithmic window.
+    Asymptotic statements are considered in the regime <em>L → ∞</em>.
+  </dd>
+  <p class="source">
+    Source: extracted from <em>Layer 0 — Core Proof Engine</em>, Ch.2.
+  </p>
 
-    <dt><strong>$\psi_L$ (or $\phi_L$)</strong></dt>
-    <dd>[Window/test function; normalization convention (e.g. $e^{x/2}$ if used).]</dd>
+  <dt><strong>$\beta$</strong></dt>
+  <dd>
+    Frequency (dual) variable conjugate to the logarithmic coordinate <em>u</em>.
+    Resonance occurs when <em>β</em> matches the imaginary part of a zeta zero.
+  </dd>
+  <p class="source">
+    Source: extracted from <em>Layer 0 — Core Proof Engine</em>, Ch.2–3.
+  </p>
 
-    <dt><strong>$w$</strong></dt>
-    <dd>[Weight; what properties are assumed (bounded/support/smoothness).]</dd>
-  </dl>
+  <dt><strong>$\phi_L(x) = \eta(x/L)e^{x/2}$</strong></dt>
+  <dd>
+    Normalized window function.
+    The exponential factor aligns the observable with the critical line
+    normalization in the explicit formula.
+  </dd>
+  <p class="source">
+    Source: extracted from <em>Layer 0 — Core Proof Engine</em>, Ch.2 and App.~A.2.
+  </p>
 
-  <hr />
+  <dt><strong>$w(u)$</strong></dt>
+  <dd>
+    An admissible weight function, assumed to satisfy boundedness and regularity
+    conditions sufficient for all stated estimates.
+  </dd>
+  <p class="source">
+    Source: extracted from <em>Layer 0 — Core Proof Engine</em>, Ch.2.
+  </p>
+</dl>
+
 
   <!-- =====================
        C. 핵심 수식 (존재방정식/정의방정식)
        ===================== -->
   <h2>C. Core Equations</h2>
 
-  <h3>C.1 Definition (observable)</h3>
-  <p><strong>Equation:</strong></p>
-  <pre>
-[ Put the equation here in plain text or LaTeX-friendly form. ]
-Example:
-A(U,L;β) = Σ_{u∈Λ∩[U,U+L]} w(u) ψ_L(u-U) e^{-iβu}
-  </pre>
+<h3>C.1 Definition of the observable</h3>
 
-  <p><strong>Meaning:</strong><br />
-    [1–4 lines: what is being measured, what varies, what is fixed.]
-  </p>
+<pre>
+A_\phi(U,L;\beta)
+=
+\sum_{u \in \Lambda \cap [U,U+L]}
+w(u)\,\phi_L(u-U)\,e^{-i\beta u}
+</pre>
 
-  <p><strong>Notes:</strong><br />
-    [Any “don’t misread this” clarifications.]
-  </p>
+<p>
+  Logarithmically localized exponential observable.
+  The window location <em>U</em> and length <em>L</em> determine the region of
+  observation, while <em>β</em> is the dual frequency variable.
+  This observable is fixed once and for all throughout the analysis.
+</p>
 
-  <h3>C.2 Energy / scale (normalization)</h3>
-  <p><strong>Equation:</strong></p>
-  <pre>
-Example:
-M(U,L) = Σ_{u∈Λ∩[U,U+L]} w(u)^2 |ψ_L(u-U)|^2
-  </pre>
+<p class="source">
+  Source: extracted from <em>Layer 0 — Core Proof Engine</em>, Ch.2.
+</p>
 
-  <p><strong>Meaning:</strong><br />
-    [Why this is the intrinsic scale; what “L-independent constants” means.]
-  </p>
+<hr />
 
-  <h3>C.3 Existence-style statement</h3>
-  <p><strong>Equation / statement:</strong></p>
-  <pre>
-[Write the “existence equation” or “forcing law” here.]
-Example skeleton:
-(If condition X holds) ⇒ ∃U such that |A(U,L;β0)|^2 ≥ (something)
-  </pre>
+<h3>C.2 Intrinsic energy scale</h3>
 
-  <p><strong>Meaning:</strong><br />
-    [What existence is claimed, what is not, which variable is existential.]
-  </p>
+<pre>
+M_\phi(U,L)
+=
+\sum_{u \in \Lambda \cap [U,U+L]}
+w(u)^2\,|\phi_L(u-U)|^2
+</pre>
 
-  <hr />
+<p>
+  Intrinsic energy associated with the observable.
+  All upper and lower bounds are measured relative to this scale.
+  Uniform estimates require constants that do not depend on the window length
+  <em>L</em>.
+</p>
+
+<p class="source">
+  Source: extracted from <em>Layer 0 — Core Proof Engine</em>, Ch.2.
+</p>
+
+<hr />
+
+<h3>C.3 Normalization of the window</h3>
+
+<pre>
+\phi_L(x) = \eta(x/L)\,e^{x/2},
+\qquad \eta \in C_c^\infty([0,1]),\ \eta \ge 0,\ \int_0^1 \eta(x)\,dx = 1
+</pre>
+
+<p>
+  The exponential factor <em>e^{x/2}</em> aligns the observable with the critical
+  line normalization in the Weil–Guinand explicit formula.
+  This choice separates exponential amplification from polynomial background
+  growth.
+</p>
+
+<p class="source">
+  Source: extracted from <em>Layer 0 — Core Proof Engine</em>, Ch.2 and App.~A.2.
+</p>
+
+<hr />
+
+<h3>C.4 Existence-style lower bound (forced amplification)</h3>
+
+<pre>
+If there exists a nontrivial zero
+ρ_0 = σ_0 + iγ_0 with σ_0 &gt; 1/2,
+then for sufficiently large L
+there exists U = U(L) such that
+
+|A_\phi(U,L;γ_0)|^2
+\ge
+c_\phi^2\,M_\phi(U,L)\,e^{2(\sigma_0-1/2)L}.
+</pre>
+
+<p>
+  Off–critical-line zeros force exponential amplification of the fixed observable
+  at the resonant frequency <em>β = γ_0</em>.
+  The constant <em>c<sub>φ</sub></em> is independent of <em>L</em>.
+</p>
+
+<p class="source">
+  Source: extracted from <em>Layer 0 — Core Proof Engine</em>, Ch.3.
+</p>
+
+<hr />
+
+<h3>C.5 Uniform mean–square upper bound</h3>
+
+<pre>
+\int_{U_0}^{U_0+L}
+|A_\phi(U,L;\beta)|^2\,dU
+\le
+C_{\phi,\varepsilon}\,L^{1+\varepsilon}\,
+\sup_{U} M_\phi(U,L)
+\qquad (\forall\,\beta \in \mathbb{R}).
+</pre>
+
+<p>
+  Uniform mean–square control of the same observable over window translations.
+  The implicit constant <em>C<sub>φ,ε</sub></em> is independent of <em>L</em>,
+  <em>U</em>, and <em>β</em>.
+</p>
+
+<p class="source">
+  Source: extracted from <em>Layer 0 — Core Proof Engine</em>, Ch.4.2.
+</p>
+
+<hr />
+
+<h3>C.6 Mean–square collision principle</h3>
+
+<pre>
+Exponential lower bounds and uniform polynomial mean–square upper bounds
+cannot simultaneously hold for the same fixed observable as L → ∞.
+</pre>
+
+<p>
+  When both C.4 and C.5 apply to the same observable with the same normalization,
+  their growth rates are incompatible.
+  This incompatibility excludes the existence of off–critical-line zeros.
+</p>
+
+<p class="source">
+  Source: extracted from <em>Layer 0 — Core Proof Engine</em>, Ch.5.
+</p>
+
 
   <!-- =====================
        D. 사용 규칙/해석 규칙 (짧게)
        ===================== -->
-  <h2>D. Reading Rules</h2>
-  <ul>
-    <li><strong>Same-object rule:</strong> all bounds refer to the same fixed observable and the same energy scale.</li>
-    <li><strong>What counts as “uniform”:</strong> constants do not depend on $L$ (and typically not on $U$ or $\beta$ unless stated).</li>
-    <li><strong>What the filters do:</strong> they restrict the support set $\Lambda$; they do not change the normalization.</li>
-  </ul>
+<h2>D. Reading Rules</h2>
 
-  <hr />
+<ul>
+  <li>
+    <strong>Fixed-object rule.</strong><br />
+    All statements, bounds, and comparisons refer to the same fixed observable
+    <em>A<sub>φ</sub>(U,L;β)</em> defined in Section C.1.
+    No result obtained for a different observable may be transferred to it.
+  </li>
+  <p class="source">
+    Source: extracted from <em>Layer 0 — Core Proof Engine</em>, Ch.1–2.
+  </p>
 
-  <!-- =====================
-       E. 짧은 링크/비고
-       ===================== -->
-  <h2>E. Remarks / Links</h2>
-  <ul>
-    <li>[Related note: /notes/...]</li>
-    <li>[Related paper layer: /publications/...]</li>
-  </ul>
+  <li>
+    <strong>Same normalization rule.</strong><br />
+    Every estimate is measured relative to the intrinsic energy scale
+    <em>M<sub>φ</sub>(U,L)</em>.
+    No re-scaling, smoothing, or renormalization is permitted between bounds.
+  </li>
+  <p class="source">
+    Source: extracted from <em>Layer 0 — Core Proof Engine</em>, Ch.2.
+  </p>
+
+  <li>
+    <strong>Uniformity rule.</strong><br />
+    Unless explicitly stated otherwise, all implicit constants are independent
+    of the window length <em>L</em>.
+    Dependence on <em>U</em> or <em>β</em> must be stated explicitly.
+  </li>
+  <p class="source">
+    Source: extracted from <em>Layer 0 — Core Proof Engine</em>, Ch.2 and App.~A.3.
+  </p>
+
+  <li>
+    <strong>Filter scope rule.</strong><br />
+    Filters restrict only the support set <em>Λ</em>.
+    They do not alter the observable, its normalization, or the form of the
+    explicit formula.
+  </li>
+  <p class="source">
+    Source: extracted from <em>Layer 0 — Core Proof Engine</em>, Ch.2.
+  </p>
+
+  <li>
+    <strong>Existential interpretation rule.</strong><br />
+    Statements asserting the existence of a window location <em>U</em> are to be
+    read as existence claims only.
+    No uniformity in <em>U</em> is implied unless explicitly stated.
+  </li>
+  <p class="source">
+    Source: extracted from <em>Layer 0 — Core Proof Engine</em>, Ch.3.
+  </p>
+
+  <li>
+    <strong>Collision reading rule.</strong><br />
+    The mean–square collision principle applies only when the exponential lower
+    bound and the polynomial mean–square upper bound are imposed on the same
+    observable with the same normalization.
+  </li>
+  <p class="source">
+    Source: extracted from <em>Layer 0 — Core Proof Engine</em>, Ch.5.
+  </p>
+</ul>
 
   <p>
     <em>Last updated:</em> 2026-01-31
