@@ -17,176 +17,96 @@
 
 <h1>Notes</h1>
 
-<section class="notes-lead">
-  <p class="notes-lead-main">
-    This page is a structured archive of <strong>core definitions</strong>,
-    <strong>canonical observables</strong>, and <strong>existence-style statements</strong>
-    that repeatedly appear across the project.
-  </p>
+<p class="notes-intro">
+  A compact index of layer-wise reference notes (definitions, canonical objects, and core equations).
+</p>
 
-  <p class="notes-lead-sub">
-    Each entry is maintained as a <em>reference note</em>: concise, stable, and citable.
-    Updates prioritize clarity and traceability over narrative exposition.
-  </p>
-
-  <div class="notes-badges">
-    <span class="badge">Reference-first</span>
-    <span class="badge">Layered</span>
-    <span class="badge">Inline sourcing</span>
-    <span class="badge">Math-ready</span>
-  </div>
-</section>
-
-<hr class="divider" />
-
-<h2>Entries</h2>
-
-<section class="notes-grid">
-  <a class="note-card" href="/notes/layer-0-core-concepts.html">
-    <div class="note-card-top">
-      <div class="note-card-title">Layer 0 — Core Concepts</div>
-      <div class="note-card-meta">Last updated: 2026-01-31</div>
-    </div>
-
-    <div class="note-card-desc">
-      Definitions, symbols, and the core equations (observable + energy + collision).
-      The “building code” for reading all later layers.
-    </div>
-
-    <div class="note-card-tags">
-      <span class="tag">Definitions</span>
-      <span class="tag">Notation</span>
-      <span class="tag">Core equations</span>
-      <span class="tag">Reading rules</span>
-    </div>
+<section class="notes-hub">
+  <a class="note-tile" href="/notes/layer-0-core-concepts.html">
+    <div class="tile-title">Layer 0</div>
+    <div class="tile-sub">Core Concepts</div>
   </a>
 
-  <!-- Future layers (activate when available)
-  <a class="note-card disabled" href="#">
-    <div class="note-card-top">
-      <div class="note-card-title">Layer 1 — Structural Filters</div>
-      <div class="note-card-meta">Planned</div>
-    </div>
-    <div class="note-card-desc">
-      Filter classes and admissibility: square-free / model set / incommensurate.
-    </div>
-    <div class="note-card-tags">
-      <span class="tag">SF</span><span class="tag">QC</span><span class="tag">IC</span>
-    </div>
+  <!-- Uncomment when ready
+  <a class="note-tile" href="/notes/layer-1-structural-filters.html">
+    <div class="tile-title">Layer 1</div>
+    <div class="tile-sub">Structural Filters</div>
+  </a>
+
+  <a class="note-tile" href="/notes/layer-2-spectral-dynamics.html">
+    <div class="tile-title">Layer 2</div>
+    <div class="tile-sub">Spectral Dynamics</div>
+  </a>
+
+  <a class="note-tile" href="/notes/layer-3-readout-operator.html">
+    <div class="tile-title">Layer 3</div>
+    <div class="tile-sub">Readout Operator</div>
+  </a>
+
+  <a class="note-tile" href="/notes/layer-4-diagnostics.html">
+    <div class="tile-title">Layer 4</div>
+    <div class="tile-sub">Diagnostics</div>
+  </a>
+
+  <a class="note-tile" href="/notes/layer-5-synthesis.html">
+    <div class="tile-title">Layer 5</div>
+    <div class="tile-sub">Synthesis</div>
   </a>
   -->
 </section>
 
-<p class="notes-foot">
-  Tip: entries are designed to be linkable from papers as stable references.
-</p>
-
 <style>
-  /* ===== Notes index (local) ===== */
-  .notes-lead{
-    margin-top: 12px;
-    padding: 14px 16px;
-    border: 1px solid #e5e7eb;
-    border-radius: 14px;
-    background: #ffffff;
-  }
-  .notes-lead-main{
-    margin: 0 0 8px;
-    font-size: 1.05rem;
-    line-height: 1.75;
-  }
-  .notes-lead-sub{
-    margin: 0 0 12px;
-    color: #6b7280;
-    line-height: 1.75;
-  }
-  .notes-badges{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-  .badge{
-    display: inline-block;
-    padding: 6px 10px;
-    border: 1px solid #e5e7eb;
-    border-radius: 999px;
-    font-size: 0.85rem;
-    color: #374151;
-    background: #f8fafc;
+  /* ===== Notes hub: minimal tiles ===== */
+  .notes-intro{
+    margin: 8px 0 18px;
+    color: #5f6368;
+    line-height: 1.7;
+    max-width: 72ch;
   }
 
-  .notes-grid{
+  .notes-hub{
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 14px;
-    margin-top: 12px;
-  }
-  @media (max-width: 820px){
-    .notes-grid{ grid-template-columns: 1fr; }
+    margin-top: 8px;
   }
 
-  .note-card{
+  @media (max-width: 980px){
+    .notes-hub{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 640px){
+    .notes-hub{ grid-template-columns: 1fr; }
+  }
+
+  .note-tile{
     display: block;
     text-decoration: none;
     color: inherit;
-    border: 1px solid #e5e7eb;
-    border-radius: 14px;
     background: #ffffff;
-    padding: 14px 16px;
-    transition: transform 0.06s ease, box-shadow 0.06s ease, border-color 0.06s ease;
+    border: 1px solid #e0e0e0;
+    border-radius: 14px;
+    padding: 18px 18px;
+    transition: transform 0.08s ease, box-shadow 0.08s ease, border-color 0.08s ease;
   }
-  .note-card:hover{
+
+  .note-tile:hover{
     transform: translateY(-1px);
-    border-color: #d1d5db;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    border-color: #d0d0d0;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.08);
   }
 
-  .note-card-top{
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 10px;
-    margin-bottom: 8px;
-  }
-  .note-card-title{
-    font-weight: 650;
-    font-size: 1.08rem;
+  .tile-title{
+    font-weight: 700;
+    font-size: 1.05rem;
     letter-spacing: -0.01em;
-  }
-  .note-card-meta{
-    font-size: 0.85rem;
-    color: #6b7280;
-    white-space: nowrap;
-  }
-  .note-card-desc{
-    color: #374151;
-    line-height: 1.7;
-    margin-bottom: 10px;
-  }
-  .note-card-tags{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-  .tag{
-    display: inline-block;
-    padding: 4px 8px;
-    border: 1px solid #e5e7eb;
-    border-radius: 999px;
-    font-size: 0.82rem;
-    color: #4b5563;
-    background: #f9fafb;
+    color: #202124;
+    margin-bottom: 6px;
   }
 
-  .note-card.disabled{
-    opacity: 0.55;
-    pointer-events: none;
-  }
-
-  .notes-foot{
-    margin-top: 16px;
-    color: #6b7280;
-    font-size: 0.92rem;
+  .tile-sub{
+    font-size: 0.98rem;
+    color: #5f6368;
+    line-height: 1.5;
   }
 </style>
 
