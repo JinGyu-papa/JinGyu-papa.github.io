@@ -1,41 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Research Note — 2026-01-31</title>
-  <link rel="stylesheet" href="/assets/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Notes — Core Concepts (Template)</title>
+  <link rel="stylesheet" href="/assets/style.css" />
 </head>
+
 <body>
+  <nav>
+    <a href="/">Home</a> |
+    <a href="/research/">Research</a> |
+    <a href="/publications/">Publications</a> |
+    <a href="/notes/">Notes</a> |
+    <a href="/cv/">CV</a>
+  </nav>
 
-<nav>
-  <a href="/">Home</a> |
-  <a href="/research/">Research</a> |
-  <a href="/publications/">Publications</a> |
-  <a href="/notes/">Notes</a> |
-  <a href="/cv/">CV</a>
-</nav>
+  <h1>Core Concepts Note</h1>
 
-<h1>Research Note — 2026-01-31</h1>
+  <p>
+    <strong>Date:</strong> 2026-01-31
+    &nbsp;&nbsp;•&nbsp;&nbsp;
+    <strong>ID:</strong> core-concepts-template
+    &nbsp;&nbsp;•&nbsp;&nbsp;
+    <strong>Scope:</strong> definitions + symbols + core equations
+  </p>
 
-<p><strong>Date:</strong> 2026-01-31</p>
+  <p>
+    This note is a compact reference for readers: terminology, notation,
+    and the “existence-style” equations used throughout the work.
+  </p>
 
-<p><strong>Context:</strong><br>
-This note records a core conceptual or structural idea
-prior to full formalization.
-</p>
+  <hr />
 
-<p><strong>Statement:</strong><br>
-[Concise description of the idea or observation.]
-</p>
+  <!-- =====================
+       A. 핵심 용어 (짧게)
+       ===================== -->
+  <h2>A. Core Terms</h2>
 
-<p><strong>Remarks:</strong><br>
-[Optional clarifications, constraints, or intended scope.]
-</p>
+  <dl>
+    <dt><strong>[Term 1]</strong></dt>
+    <dd>[1–3 lines. What it is / why introduced / what it excludes.]</dd>
 
-<p>
-This note is published as a timestamped public record
-within the research archive.
-</p>
+    <dt><strong>[Term 2]</strong></dt>
+    <dd>[1–3 lines.]</dd>
 
+    <dt><strong>[Term 3]</strong></dt>
+    <dd>[1–3 lines.]</dd>
+  </dl>
+
+  <hr />
+
+  <!-- =====================
+       B. 기호/객체 정의
+       ===================== -->
+  <h2>B. Symbols & Objects</h2>
+
+  <dl>
+    <dt><strong>$u=\log n$</strong></dt>
+    <dd>[Meaning on log-axis; what “window” means in u-coordinates.]</dd>
+
+    <dt><strong>$\Lambda$</strong></dt>
+    <dd>[Filtered set on the log-axis (square-free / model set / incommensurate).]</dd>
+
+    <dt><strong>$L,\,U$</strong></dt>
+    <dd>[Window length and window location; how they are used.]</dd>
+
+    <dt><strong>$\beta$</strong></dt>
+    <dd>[Frequency / phase variable (dual to u).]</dd>
+
+    <dt><strong>$\psi_L$ (or $\phi_L$)</strong></dt>
+    <dd>[Window/test function; normalization convention (e.g. $e^{x/2}$ if used).]</dd>
+
+    <dt><strong>$w$</strong></dt>
+    <dd>[Weight; what properties are assumed (bounded/support/smoothness).]</dd>
+  </dl>
+
+  <hr />
+
+  <!-- =====================
+       C. 핵심 수식 (존재방정식/정의방정식)
+       ===================== -->
+  <h2>C. Core Equations</h2>
+
+  <h3>C.1 Definition (observable)</h3>
+  <p><strong>Equation:</strong></p>
+  <pre>
+[ Put the equation here in plain text or LaTeX-friendly form. ]
+Example:
+A(U,L;β) = Σ_{u∈Λ∩[U,U+L]} w(u) ψ_L(u-U) e^{-iβu}
+  </pre>
+
+  <p><strong>Meaning:</strong><br />
+    [1–4 lines: what is being measured, what varies, what is fixed.]
+  </p>
+
+  <p><strong>Notes:</strong><br />
+    [Any “don’t misread this” clarifications.]
+  </p>
+
+  <h3>C.2 Energy / scale (normalization)</h3>
+  <p><strong>Equation:</strong></p>
+  <pre>
+Example:
+M(U,L) = Σ_{u∈Λ∩[U,U+L]} w(u)^2 |ψ_L(u-U)|^2
+  </pre>
+
+  <p><strong>Meaning:</strong><br />
+    [Why this is the intrinsic scale; what “L-independent constants” means.]
+  </p>
+
+  <h3>C.3 Existence-style statement</h3>
+  <p><strong>Equation / statement:</strong></p>
+  <pre>
+[Write the “existence equation” or “forcing law” here.]
+Example skeleton:
+(If condition X holds) ⇒ ∃U such that |A(U,L;β0)|^2 ≥ (something)
+  </pre>
+
+  <p><strong>Meaning:</strong><br />
+    [What existence is claimed, what is not, which variable is existential.]
+  </p>
+
+  <hr />
+
+  <!-- =====================
+       D. 사용 규칙/해석 규칙 (짧게)
+       ===================== -->
+  <h2>D. Reading Rules</h2>
+  <ul>
+    <li><strong>Same-object rule:</strong> all bounds refer to the same fixed observable and the same energy scale.</li>
+    <li><strong>What counts as “uniform”:</strong> constants do not depend on $L$ (and typically not on $U$ or $\beta$ unless stated).</li>
+    <li><strong>What the filters do:</strong> they restrict the support set $\Lambda$; they do not change the normalization.</li>
+  </ul>
+
+  <hr />
+
+  <!-- =====================
+       E. 짧은 링크/비고
+       ===================== -->
+  <h2>E. Remarks / Links</h2>
+  <ul>
+    <li>[Related note: /notes/...]</li>
+    <li>[Related paper layer: /publications/...]</li>
+  </ul>
+
+  <p>
+    <em>Last updated:</em> 2026-01-31
+  </p>
 </body>
 </html>
