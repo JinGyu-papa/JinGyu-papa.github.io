@@ -237,102 +237,101 @@
     <!-- =====================
          C. Core Equations
          ===================== -->
-    <section id="C">
-      <h2>C. Core Equations</h2>
+<section id="C">
+  <h2>C. Core Equations</h2>
 
-      <h3>C.1 Definition of the observable</h3>
-      <pre>
-        \[
-A_\phi(U,L;\beta)
-=
-\sum_{u \in \Lambda \cap [U,U+L]}
-w(u)\,\phi_L(u-U)\,e^{-i\beta u}
-        \]
-      </pre>
-      <p>
-        Logarithmically localized exponential observable. The window location <em>U</em> and length <em>L</em>
-        determine the region of observation, while <em>β</em> is the dual frequency variable. This observable
-        is fixed once and for all throughout the analysis.
-      </p>
-      <p class="source">Source: extracted from <em>Layer 0 — Core Proof Engine</em>, Ch.2.</p>
+  <h3>C.1 Definition of the observable</h3>
 
-      <h3>C.2 Intrinsic energy scale</h3>
-      <pre>
-                \[
-M_\phi(U,L)
-=
-\sum_{u \in \Lambda \cap [U,U+L]}
-w(u)^2\,|\phi_L(u-U)|^2
-              \]
-      </pre>
-      <p>
-        Intrinsic energy associated with the observable. All upper and lower bounds are measured relative to
-        this scale. Uniform estimates require constants that do not depend on the window length <em>L</em>.
-      </p>
-      <p class="source">Source: extracted from <em>Layer 0 — Core Proof Engine</em>, Ch.2.</p>
+  \[
+  A_\phi(U,L;\beta)
+  =
+  \sum_{u \in \Lambda \cap [U,U+L]}
+  w(u)\,\phi_L(u-U)\,e^{-i\beta u}
+  \]
 
-      <h3>C.3 Normalization of the window</h3>
-      <pre>
-        \[
-\phi_L(x) = \eta(x/L)\,e^{x/2},
-\qquad \eta \in C_c^\infty([0,1]),\ \eta \ge 0,\ \int_0^1 \eta(x)\,dx = 1
-        \]
-      </pre>
-      <p>
-        The exponential factor <em>e^{x/2}</em> aligns the observable with the critical line normalization in the
-        Weil–Guinand explicit formula. This choice separates exponential amplification from polynomial background growth.
-      </p>
-      <p class="source">Source: extracted from <em>Layer 0 — Core Proof Engine</em>, Ch.2 and App.~A.2.</p>
+  <p>
+    Logarithmically localized exponential observable. The window location <em>U</em> and length <em>L</em>
+    determine the region of observation, while <em>β</em> is the dual frequency variable. This observable
+    is fixed once and for all throughout the analysis.
+  </p>
+  <p class="source">Source: extracted from <em>Layer 0 — Core Proof Engine</em>, Ch.2.</p>
 
-      <h3>C.4 Existence-style lower bound (forced amplification)</h3>
-      <pre>
-        \[
-If there exists a nontrivial zero
-ρ_0 = σ_0 + iγ_0 with σ_0 &gt; 1/2,
-then for sufficiently large L
-there exists U = U(L) such that
+  <h3>C.2 Intrinsic energy scale</h3>
 
-|A_\phi(U,L;γ_0)|^2
-\ge
-c_\phi^2\,M_\phi(U,L)\,e^{2(\sigma_0-1/2)L}.
-        \]
-      </pre>
-      <p>
-        Off–critical-line zeros force exponential amplification of the fixed observable at the resonant frequency
-        <em>β = γ_0</em>. The constant <em>c<sub>φ</sub></em> is independent of <em>L</em>.
-      </p>
-      <p class="source">Source: extracted from <em>Layer 0 — Core Proof Engine</em>, Ch.3.</p>
+  \[
+  M_\phi(U,L)
+  =
+  \sum_{u \in \Lambda \cap [U,U+L]}
+  w(u)^2\,|\phi_L(u-U)|^2
+  \]
 
-      <h3>C.5 Uniform mean–square upper bound</h3>
-      <pre>
-        \[
-\int_{U_0}^{U_0+L}
-|A_\phi(U,L;\beta)|^2\,dU
-\le
-C_{\phi,\varepsilon}\,L^{1+\varepsilon}\,
-\sup_{U} M_\phi(U,L)
-\qquad (\forall\,\beta \in \mathbb{R}).
-        \]
-      </pre>
-      <p>
-        Uniform mean–square control of the same observable over window translations. The implicit constant
-        <em>C<sub>φ,ε</sub></em> is independent of <em>L</em>, <em>U</em>, and <em>β</em>.
-      </p>
-      <p class="source">Source: extracted from <em>Layer 0 — Core Proof Engine</em>, Ch.4.2.</p>
+  <p>
+    Intrinsic energy associated with the observable. All upper and lower bounds are measured relative to
+    this scale. Uniform estimates require constants that do not depend on the window length <em>L</em>.
+  </p>
+  <p class="source">Source: extracted from <em>Layer 0 — Core Proof Engine</em>, Ch.2.</p>
 
-      <h3>C.6 Mean–square collision principle</h3>
-      <pre>
-Exponential lower bounds and uniform polynomial mean–square upper bounds
-cannot simultaneously hold for the same fixed observable as L → ∞.
-      </pre>
-      <p>
-        When both C.4 and C.5 apply to the same observable with the same normalization, their growth rates are incompatible.
-        This incompatibility excludes the existence of off–critical-line zeros.
-      </p>
-      <p class="source">Source: extracted from <em>Layer 0 — Core Proof Engine</em>, Ch.5.</p>
-    </section>
+  <h3>C.3 Normalization of the window</h3>
 
-    <hr class="divider" />
+  \[
+  \phi_L(x) = \eta(x/L)\,e^{x/2},
+  \qquad
+  \eta \in C_c^\infty([0,1]),\ \eta \ge 0,\ \int_0^1 \eta(x)\,dx = 1
+  \]
+
+  <p>
+    The exponential factor <em>e^{x/2}</em> aligns the observable with the critical line normalization in the
+    Weil–Guinand explicit formula. This choice separates exponential amplification from polynomial background growth.
+  </p>
+  <p class="source">Source: extracted from <em>Layer 0 — Core Proof Engine</em>, Ch.2 and App.~A.2.</p>
+
+  <h3>C.4 Existence-style lower bound (forced amplification)</h3>
+
+  \[
+  \text{If there exists a nontrivial zero }\rho_0=\sigma_0+i\gamma_0\text{ with }\sigma_0>\tfrac12,
+  \text{ then for sufficiently large }L\text{ there exists }U=U(L)\text{ such that}
+  \]
+  \[
+  |A_\phi(U,L;\gamma_0)|^2
+  \ge
+  c_\phi^2\,M_\phi(U,L)\,e^{2(\sigma_0-1/2)L}.
+  \]
+
+  <p>
+    Off–critical-line zeros force exponential amplification of the fixed observable at the resonant frequency
+    <em>β = γ<sub>0</sub></em>. The constant <em>c<sub>φ</sub></em> is independent of <em>L</em>.
+  </p>
+  <p class="source">Source: extracted from <em>Layer 0 — Core Proof Engine</em>, Ch.3.</p>
+
+  <h3>C.5 Uniform mean–square upper bound</h3>
+
+  \[
+  \int_{U_0}^{U_0+L}
+  |A_\phi(U,L;\beta)|^2\,dU
+  \le
+  C_{\phi,\varepsilon}\,L^{1+\varepsilon}\,
+  \sup_{U} M_\phi(U,L)
+  \qquad (\forall\,\beta \in \mathbb{R}).
+  \]
+
+  <p>
+    Uniform mean–square control of the same observable over window translations. The implicit constant
+    <em>C<sub>φ,ε</sub></em> is independent of <em>L</em>, <em>U</em>, and <em>β</em>.
+  </p>
+  <p class="source">Source: extracted from <em>Layer 0 — Core Proof Engine</em>, Ch.4.2.</p>
+
+  <h3>C.6 Mean–square collision principle</h3>
+
+  <p>
+    Exponential lower bounds and uniform polynomial mean–square upper bounds cannot simultaneously hold for the same
+    fixed observable as <em>L → ∞</em>.
+  </p>
+
+  <p class="source">Source: extracted from <em>Layer 0 — Core Proof Engine</em>, Ch.5.</p>
+</section>
+
+<hr class="divider" />
+
 
     <!-- =====================
          D. Reading Rules
