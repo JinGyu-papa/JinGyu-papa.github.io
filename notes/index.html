@@ -17,25 +17,178 @@
 
 <h1>Notes</h1>
 
-<p>
-This page archives research notes, technical memos, and dated records
-that track the development of core ideas.
-</p>
+<section class="notes-lead">
+  <p class="notes-lead-main">
+    This page is a structured archive of <strong>core definitions</strong>,
+    <strong>canonical observables</strong>, and <strong>existence-style statements</strong>
+    that repeatedly appear across the project.
+  </p>
 
-<p>
-Entries are intended as concise, timestamped references rather than
-fully polished expositions.
-</p>
+  <p class="notes-lead-sub">
+    Each entry is maintained as a <em>reference note</em>: concise, stable, and citable.
+    Updates prioritize clarity and traceability over narrative exposition.
+  </p>
+
+  <div class="notes-badges">
+    <span class="badge">Reference-first</span>
+    <span class="badge">Layered</span>
+    <span class="badge">Inline sourcing</span>
+    <span class="badge">Math-ready</span>
+  </div>
+</section>
+
+<hr class="divider" />
 
 <h2>Entries</h2>
 
-<ul>
-  <li>
-    <a href="/notes/Layer 0 - Core Concepts.html">
-      Layer 0 - Core Concepts
-    </a>
-  </li>
-</ul>
-  
+<section class="notes-grid">
+  <a class="note-card" href="/notes/layer-0-core-concepts.html">
+    <div class="note-card-top">
+      <div class="note-card-title">Layer 0 — Core Concepts</div>
+      <div class="note-card-meta">Last updated: 2026-01-31</div>
+    </div>
+
+    <div class="note-card-desc">
+      Definitions, symbols, and the core equations (observable + energy + collision).
+      The “building code” for reading all later layers.
+    </div>
+
+    <div class="note-card-tags">
+      <span class="tag">Definitions</span>
+      <span class="tag">Notation</span>
+      <span class="tag">Core equations</span>
+      <span class="tag">Reading rules</span>
+    </div>
+  </a>
+
+  <!-- Future layers (activate when available)
+  <a class="note-card disabled" href="#">
+    <div class="note-card-top">
+      <div class="note-card-title">Layer 1 — Structural Filters</div>
+      <div class="note-card-meta">Planned</div>
+    </div>
+    <div class="note-card-desc">
+      Filter classes and admissibility: square-free / model set / incommensurate.
+    </div>
+    <div class="note-card-tags">
+      <span class="tag">SF</span><span class="tag">QC</span><span class="tag">IC</span>
+    </div>
+  </a>
+  -->
+</section>
+
+<p class="notes-foot">
+  Tip: entries are designed to be linkable from papers as stable references.
+</p>
+
+<style>
+  /* ===== Notes index (local) ===== */
+  .notes-lead{
+    margin-top: 12px;
+    padding: 14px 16px;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    background: #ffffff;
+  }
+  .notes-lead-main{
+    margin: 0 0 8px;
+    font-size: 1.05rem;
+    line-height: 1.75;
+  }
+  .notes-lead-sub{
+    margin: 0 0 12px;
+    color: #6b7280;
+    line-height: 1.75;
+  }
+  .notes-badges{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .badge{
+    display: inline-block;
+    padding: 6px 10px;
+    border: 1px solid #e5e7eb;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    color: #374151;
+    background: #f8fafc;
+  }
+
+  .notes-grid{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 12px;
+  }
+  @media (max-width: 820px){
+    .notes-grid{ grid-template-columns: 1fr; }
+  }
+
+  .note-card{
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    background: #ffffff;
+    padding: 14px 16px;
+    transition: transform 0.06s ease, box-shadow 0.06s ease, border-color 0.06s ease;
+  }
+  .note-card:hover{
+    transform: translateY(-1px);
+    border-color: #d1d5db;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  }
+
+  .note-card-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+  .note-card-title{
+    font-weight: 650;
+    font-size: 1.08rem;
+    letter-spacing: -0.01em;
+  }
+  .note-card-meta{
+    font-size: 0.85rem;
+    color: #6b7280;
+    white-space: nowrap;
+  }
+  .note-card-desc{
+    color: #374151;
+    line-height: 1.7;
+    margin-bottom: 10px;
+  }
+  .note-card-tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .tag{
+    display: inline-block;
+    padding: 4px 8px;
+    border: 1px solid #e5e7eb;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    color: #4b5563;
+    background: #f9fafb;
+  }
+
+  .note-card.disabled{
+    opacity: 0.55;
+    pointer-events: none;
+  }
+
+  .notes-foot{
+    margin-top: 16px;
+    color: #6b7280;
+    font-size: 0.92rem;
+  }
+</style>
+
 </body>
 </html>
