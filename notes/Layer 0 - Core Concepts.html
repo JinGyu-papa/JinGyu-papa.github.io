@@ -242,10 +242,12 @@
 
       <h3>C.1 Definition of the observable</h3>
       <pre>
+        \[
 A_\phi(U,L;\beta)
 =
 \sum_{u \in \Lambda \cap [U,U+L]}
 w(u)\,\phi_L(u-U)\,e^{-i\beta u}
+        \]
       </pre>
       <p>
         Logarithmically localized exponential observable. The window location <em>U</em> and length <em>L</em>
@@ -256,10 +258,12 @@ w(u)\,\phi_L(u-U)\,e^{-i\beta u}
 
       <h3>C.2 Intrinsic energy scale</h3>
       <pre>
+                \[
 M_\phi(U,L)
 =
 \sum_{u \in \Lambda \cap [U,U+L]}
 w(u)^2\,|\phi_L(u-U)|^2
+              \]
       </pre>
       <p>
         Intrinsic energy associated with the observable. All upper and lower bounds are measured relative to
@@ -269,8 +273,10 @@ w(u)^2\,|\phi_L(u-U)|^2
 
       <h3>C.3 Normalization of the window</h3>
       <pre>
+        \[
 \phi_L(x) = \eta(x/L)\,e^{x/2},
 \qquad \eta \in C_c^\infty([0,1]),\ \eta \ge 0,\ \int_0^1 \eta(x)\,dx = 1
+        \]
       </pre>
       <p>
         The exponential factor <em>e^{x/2}</em> aligns the observable with the critical line normalization in the
@@ -280,6 +286,7 @@ w(u)^2\,|\phi_L(u-U)|^2
 
       <h3>C.4 Existence-style lower bound (forced amplification)</h3>
       <pre>
+        \[
 If there exists a nontrivial zero
 ρ_0 = σ_0 + iγ_0 with σ_0 &gt; 1/2,
 then for sufficiently large L
@@ -288,6 +295,7 @@ there exists U = U(L) such that
 |A_\phi(U,L;γ_0)|^2
 \ge
 c_\phi^2\,M_\phi(U,L)\,e^{2(\sigma_0-1/2)L}.
+        \]
       </pre>
       <p>
         Off–critical-line zeros force exponential amplification of the fixed observable at the resonant frequency
@@ -297,12 +305,14 @@ c_\phi^2\,M_\phi(U,L)\,e^{2(\sigma_0-1/2)L}.
 
       <h3>C.5 Uniform mean–square upper bound</h3>
       <pre>
+        \[
 \int_{U_0}^{U_0+L}
 |A_\phi(U,L;\beta)|^2\,dU
 \le
 C_{\phi,\varepsilon}\,L^{1+\varepsilon}\,
 \sup_{U} M_\phi(U,L)
 \qquad (\forall\,\beta \in \mathbb{R}).
+        \]
       </pre>
       <p>
         Uniform mean–square control of the same observable over window translations. The implicit constant
